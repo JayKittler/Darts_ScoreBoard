@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <script src="./games.js"></script>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div id = 'players'>
+            <h3>Select Number of Players</h3>
+            <button onclick="set_players(1)">1</button>
+            <button onclick="set_players(2)">2</button>
+            <button onclick="set_players(3)">3</button>
+            <button onclick="set_players(4)">4</button>
+            <button onclick="set_players(5)">5</button>
+            <button onclick="set_players(6)">6</button>
+            <button onclick="set_players(7)">7</button>
+            <button onclick="set_players(8)">8</button>
+        </div>
+        <div id = 'names' style="display: none;">
+            <h1>Enter initals<h1>
+            <div id = 'inital_input'>
+                <label for ='init' id = 'name_title' style="font-size: medium;">Initals Player 1</label>
+                <input type = 'text' id = 'init' required minlength="2" maxlength="3" style="width: 20%;"/>
+                <button id="name_submit" onclick="submit_name()">Submit</button>
+                <div id = 'common initals'>
+                    <button onclick="submit_name('JK')">JK</button>
+                    <button onclick="submit_name('JMK')">JMK</button>
+                    <button onclick="submit_name('AK')">AK</button>
+                    <button onclick="submit_name('CK')">CK</button>
+                    <button onclick="submit_name('TF')">TF</button>
+                    <button onclick="submit_name('LF')">LF</button>
+                </div>
+            </div>
+        </div>
+        <div id = 'game_area'>
+            
+        </div>
+    </body>
+    <style>
+        body,
+        html{
+            padding: 0px;
+            margin: 0px;
+            height: 100%;
+        }
+        #players{
+            border: 1px solid;
+            width: 30vw;
+            position: absolute;
+            left: 35vw;
+            text-align: center;
+            top: 30vh;
+            padding-bottom: 2vh;
+            border-radius: 20%;
+        }
+        #names{
+            border: 1px solid;
+            width: 30vw;
+            position: absolute;
+            left: 35vw;
+            text-align: center;
+            top: 30vh;
+            padding-bottom: 2vh;
+            border-radius: 20%;
+        }
+        #game_area{
+            width: 100%;
+            height: 100%;
+            display: inline-flex;
+        }
+        
+        .horizontal_line{
+            width: 100%;
+            height: 0px;
+            border: 1px solid;
+            position: absolute;
+
+        }
+
+        .pound_symbol{
+            text-align: center;
+            font-size: 400%;
+            height: 10%;
+            margin: 0px;
+        }
+        .boxes{
+            border: 1px solid;
+            text-align: center;
+        }
+        .player_boxes{
+            font-size: 300%;
+
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        
+        }
+        .numbers{
+            text-align: center;
+            font-size: 300%;
+            font-family: "Varela Round", sans-serif;
+        }
+        .game_control{
+            text-align: center;
+            display: grid;
+            justify-items: center;
+        }
+        .game_control button{
+            width: 40%;
+            left: 30%;
+        }
+    </style>
+</html>
